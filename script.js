@@ -42,6 +42,6 @@ function save_data () {
 
 // Laster inn lokal lagret data
 function load_data () {
-    task_list.innerHTML = localStorage.getItem ("task_list";)
+    task_list.innerHTML = localStorage.getItem ("task_list");
 }
 load_data();

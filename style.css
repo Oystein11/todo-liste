@@ -4,9 +4,10 @@ body {
 
 header, footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: wrap;
     justify-content: center;
     align-items: center;
+    background-color: #122c34;
     height: 10em;
 }
 
@@ -15,11 +16,57 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    gap: 1em;
+    background-color: #0e4749;
+    height: 30em;
+}
+
+.liste_container {
+    width: fit-content;
+    border: white solid 1px;
+    padding: 1rem;
 }
 
 .li {
     display: flex;
     list-style: none;
     flex-direction: row;
+}
+
+.p {
+    color: white;
+}
+
+/* Responsivt for mobil*/
+@media (max-width: 426px) {
+    .p {
+        max-width: 300px;
+    }
+
+    .img {
+        max-width: 100px;
+    }
+}
+
+/* Responsivt for nettbrett*/
+@media (max-width: 770px) {
+    .p {
+        max-width: 700px;
+    }
+
+    .img {
+        max-width: 100%;
+        max-height: 40em;
+    }
+}
+
+@media (max-width: 1023px) {
+    .p {
+        max-width: 700px;
+    }
+
+    .img {
+        max-width: 100%;
+        max-height: 35em;
+    }
 }
