@@ -19,14 +19,14 @@ function add_task () {
         alert ("Legg til et element først."), console.log ("Legg til et element først.")
     }
 
-//    save_data ();
+    save_data ();
 }
 
 
 // Fjerner et listeelement fra listen
 task_list.addEventListener ("click", function (event) {
-    event.target.tag_name === "BUTTON" && event.target.parentElement.remove ();
-//    save_data ();
+    event.target.tagName === "BUTTON" && event.target.parentElement.remove ();
+    save_data ();
 });
 
 // Forhindrer siden fra å refreshe
@@ -36,12 +36,12 @@ todo_form.addEventListener ("submit", function (event) {
 });
 
 // Lagrer listen lokalt
-//function save_data () {
-//    localStorage.setItem ("task_list", task_list.innerHTML);
-//}
+function save_data () {
+    localStorage.setItem ("task_list", task_list.innerHTML);
+}
 
 // Laster inn lokal lagret data
-//function load_data () {
-//    task_list.innerHTML = localStorage.getItem ("task_list");
-//}
-//load_data();
+function load_data () {
+    task_list.innerHTML = localStorage.getItem ("task_list");
+}
+load_data();
