@@ -5,7 +5,7 @@ const task_list = document.querySelector ("#task_list_ID");
 const todo_form = document.querySelector ("#todo_form_ID");
 
 //Funksjoner
-// Legger til tekst som listeelementer
+// Legger til tekst som listeelementer, en sletteknapp ved siden av, og lagrer den lokalt
 function add_task () {
     if (input_text.value) {
         const new_task = document.createElement ("li");
@@ -16,7 +16,7 @@ function add_task () {
         task_list.appendChild (new_task);
         new_task.appendChild (delete_button);
     } else {
-        alert ("Legg til et element først.")
+        alert ("Legg til et element først."), console.log ("Legg til et element først.")
     }
 
     save_data ();
