@@ -1,0 +1,1 @@
+En basic todo-liste hvor man kan legge inn og fjerne elementer fra listen.
