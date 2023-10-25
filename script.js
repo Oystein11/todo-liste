@@ -14,6 +14,7 @@ function add_task () {
     if (input_text.value) {
         const new_task = document.createElement ("li");
         console.log (new_task);
+        const checkbox = document.createElement ("checkbox");
         const delete_button = document.createElement ("button");
         delete_button.textContent = "🗑️";
         console.log (delete_button);
