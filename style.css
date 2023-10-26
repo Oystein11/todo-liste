@@ -39,7 +39,6 @@ section {
     list-style: none;
     flex-direction: row;
     gap: 2em;
-    color: white;
 }
 
 .p {
