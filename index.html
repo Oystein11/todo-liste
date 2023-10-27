@@ -6,7 +6,6 @@
     <title>Todo-liste</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <script src="node.js"></script>
 </head>
 <body>
     <header>
@@ -22,6 +21,7 @@
                 </form>
                 <button onclick="add_task()">Legg til</button>
                 <ul id="task_list_ID"></ul>
+                <input type="checkbox" id="checkbox_ID" placeholder="Slett alt"/>
         </section>
         <section>
             <button onclick="remove_all()">Fjern alle elementer</button>
@@ -32,6 +32,5 @@
         <input type="text" id="name_login_ID" placeholder="Navn">
         <input type="password" id="password_login_ID" placeholder="Passord">
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/appwrite@13.0.0"></script>
 </body>
 </html>

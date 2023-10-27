@@ -7,28 +7,36 @@ const task_list = document.querySelector ("#task_list_ID");
 console.log (task_list);
 const todo_form = document.querySelector ("#todo_form_ID");
 console.log (todo_form);
+const checkbox = document.querySelector ("#checkbox_ID");
+console.log (checkbox);
 
 //Funksjoner
 // Legger til tekst som listeelementer, en sletteknapp ved siden av, og lagrer den lokalt
 function add_task () {
     if (input_text.value) {
         const new_task = document.createElement ("li");
-        new_task.style.color= "white";
+        new_task.style.color = "white";
         console.log (new_task);
+        const checkbox = document.createElement ("checkbox");
+        if (checkbox = true) {
+            new_task.className = "checked";
+        } else {
+            new_task.className = "p";
+        }
         const delete_button = document.createElement ("button");
         delete_button.textContent = "🗑️";
         console.log (delete_button);
 
         new_task.textContent = input_text.value;
         task_list.appendChild (new_task);
+        new_task.appendChild (checkbox);
         new_task.appendChild (delete_button);
     } else {
-        alert ("Legg til et element først."), console.log ("Legg til et element først.")
+        alert ("Legg til et element først."), console.log ("Legg til et element først.");
     }
 
     save_data ();
 }
-
 
 // Fjerner et listeelement fra listen
 task_list.addEventListener ("click", function (event) {
@@ -57,12 +65,3 @@ function load_data () {
     task_list.innerHTML = localStorage.getItem ("task_list");
 }
 load_data();
-
-// Legger inn autentisering
-// Lag en bruker
-
-
-//Innlogging for bruker
-
-
-//Legger inn databasefunksjonalitet

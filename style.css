@@ -41,6 +41,10 @@ section {
     gap: 2em;
 }
 
+.checked {
+    text-decoration: line-through;
+}
+
 .p {
     color: white;
 }
